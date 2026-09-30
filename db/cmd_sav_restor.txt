@@ -1,0 +1,7 @@
+pg_dump -U postgres -h localhost -F c -b -v -f base_piaa.dump base_piaa
+
+//Après création de la base
+pg_restore -U postgres -d base_piaa -v base_piaa.dump
+
+//linux
+sudo -u postgres pg_restore -d base_piaa -v base_piaa.dump

@@ -1,0 +1,249 @@
+:root {
+  --vt-c-white: white;
+  --vt-c-white-soft: #f8f8f8;
+  --vt-c-white-mute: #f2f2f2;
+
+  /* Charte piaa */
+  --brun-fonce: #3d2116;
+  --text-color: #1e293b;
+  --brun-fonce-flou: #3d211683;
+  --brun-clair: #9f5c25;
+  --bleu-vert: #1b8986;
+  --bleu-ge: #0071bd;
+  --beige: #f2f2f1;
+  --gris: #f2f2f1bc;
+  --red: #E34A4A;
+  --green: #61CEA6;
+  --orange: #EFBA75;
+
+  --bg-section: #f8fafc;
+
+
+  --vt-c-black: #181818;
+  --vt-c-black-soft: #222222;
+  --vt-c-black-mute: #282828;
+
+  --vt-c-indigo: #2c3e50;
+
+  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
+  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
+  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
+  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+
+  --vt-c-text-light-1: var(--vt-c-indigo);
+  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
+  --vt-c-text-dark-1: var(--vt-c-white);
+  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-background: var(--vt-c-white);
+  --color-background-soft: var(--vt-c-white-soft);
+  --color-background-mute: var(--vt-c-white-mute);
+
+  --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  --color-accent: var(--bleu-vert);
+  --color-primary: var(--brun-fonce);
+  --color-primary-flou: var(--brun-fonce-flou);
+  --color-text-dark: var(--brun-fonce);
+  --color-text-light: var(--vt-c-white);
+  --color-background-grey: var(--beige); 
+  --color-error: var(--red);
+  --color-success: var(--green);
+  --color-warning: var(--orange);
+}
+
+:root {
+  font-family: Gilroy, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var(--color-text);
+  background-color: var(--color-primary);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --border-radius: 8px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--vt-c-black);
+    --color-background-soft: var(--vt-c-black-soft);
+    --color-background-mute: var(--vt-c-black-mute);
+
+    --color-border: var(--vt-c-divider-dark-2);
+    --color-border-hover: var(--vt-c-divider-dark-1);
+
+    --color-heading: var(--vt-c-text-dark-1);
+    --color-text: var(--vt-c-text-dark-2);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+}
+
+body::-webkit-scrollbar {
+  width: 4px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--color-accent, #eef2ff);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent, #4f46e5);
+}
+
+/* Thin - 100 */
+@font-face {
+  font-family: 'Gilroy';
+  src: url('./fonts/Gilroy-Thin.woff2') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Light - 300 */
+@font-face {
+  font-family: 'Gilroy';
+  src: url('./fonts/Gilroy-Light.woff2') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Regular - 400 */
+@font-face {
+  font-family: 'Gilroy';
+  src: url('./fonts/Gilroy-Regular.woff2') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Medium - 500 */
+@font-face {
+  font-family: 'Gilroy';
+  src: url('./fonts/Gilroy-Medium.woff2') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bold - 700 */
+@font-face {
+  font-family: 'Gilroy';
+  src: url('./fonts/Gilroy-Bold.woff2') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ExtraBold - 800 */
+@font-face {
+  font-family: 'Gilroy';
+  src: url('./fonts/Gilroy-ExtraBold.woff2') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Black - 900 */
+@font-face {
+  font-family: 'Gilroy';
+  src: url('./fonts/Gilroy-Black.woff2') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 100;
+  margin-bottom: 15px;
+  color: var(--color-text);
+}
+
+h3 {
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: var(--color-text);
+}
+
+h4 {
+  font-size: clamp(0.8rem, 2vw, 1.5rem);
+  max-width: 800px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--color-text);
+  margin-bottom: 15px;
+}
+
+a {
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color 0.3s;
+  font-weight: 100;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+p {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  max-width: 800px;
+  font-size: small;
+  font-weight: 200;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+.subtitle {
+  color: var(--text-color);
+  font-size: 1.1rem;
+}

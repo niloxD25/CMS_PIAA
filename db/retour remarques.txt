@@ -1,0 +1,18 @@
+_Page d'accueil :
+    _Header et footer (ok)
+    _Mots de bienvenue du Ministre ou du Coordonnateur du projet (à mettre dans la page d'accueil) (ok)
+    _A propos du Projet (Nouvelle page contenu ok)
+    _Actualités récentes (à mettre dans la page d'accueil) (ok)
+
+_ACTIVITES :
+    _Investissements Travaux (titre des infos à afficher à revoir)
+    _Actions de proximité (à voir)
+    _Gouvernance et appui institutionnel (à voir)
+
+_ACTUALITES/EVENEMENTS : (garder la page évènement)
+
+_IMPACTS : 
+    _Témoignages/ Portraits, Reportages vidéo (ok)
+    _Galeries multimédia, Supports multimédias, Evolution des travaux (changer en réalisation)
+
+_Documentation : (garder la page actuelle si possible)

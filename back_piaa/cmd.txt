@@ -1,0 +1,37 @@
+(générer automatiquement tous les models à partir d'une base existante)
+composer require reliese/laravel --dev
+php artisan vendor:publish --tag=reliese-models
+php artisan code:models
+
+(créer un controller)
+php artisan make:controller EvenementController --api
+
+(lancer le serveur)
+php artisan serve
+
+(migrations sans drop les tables)
+php artisan migrate:install
+php artisan migrate
+
+(créer un seeder)
+php artisan make:seeder TypesCompteSeeder
+
+(lancer un seeder)
+php artisan db:seed --class=DatabaseSeeder
+
+(Installer Sanctum pour gerer les AUTH)
+composer require laravel/sanctum
+php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
+
+(Installer laravel-auditing)
+composer require owen-it/laravel-auditing
+php artisan vendor:publish --provider "OwenIt\Auditing\AuditingServiceProvider"
+
+(Supprimer l'ancien lien storage public windows)
+rmdir /s public\storage
+
+(Supprimer l'ancien lien storage public linux)
+rm public/storage
+
+(Recréer le lien storage public)
+php artisan storage:link

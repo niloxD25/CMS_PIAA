@@ -1,0 +1,29 @@
+_types_compte(id, type, niveau_acces, deletedAt)
+_comptes(id, nom, mail, mdp, type_compte, deletedAt)
+
+_projets(id, nom, description, logo, année_debut, durée, deletedAt)
+_projet_en_cours(id, projet, date)
+
+_organisations(id, nom, description, logo, lien, deletedAt)
+_partenariats_financiers(id, organisation, projet)
+_parties_prenantes(id, organisation, projet)
+
+_etats_evenement(id, etat, deletedAt)
+_evenements(id, titre, description, date_debut, date_fin, image, projet, niveau_acces, archived, deletedAt)
+_changement_etat_evenement(id, evenement, etat_evenement, date)
+_sections(id, titre, description, image, evenement, deletedAt)
+_medias_evenement(id, chemain, evenement)
+
+_temoignages(id, temoin, residence, contenu, image, archived, deletedAt)
+
+_realisations(id, titre, beneficiaires, impacts_potentiel, date, projet, niveau_acces, archived, deletedAt)
+_medias_realisation(id, chemain, realisation)
+
+_plans_reperage(id, titre, description, image, projet)
+
+_documents(id, chemain, projet, niveau_acces, archived, deletedAt)
+
+_types_message(id, type, deletedAt)
+_messages(id, nom, mail, telephone, message, type_message, deletedAt)
+
+_annonces(id, titre, contenu, date_affichage, jours_affichage)

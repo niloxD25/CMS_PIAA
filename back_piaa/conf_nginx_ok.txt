@@ -1,0 +1,46 @@
+server {
+    listen 80;
+    server_name 84.247.182.163;
+    
+    root /home/tsinjo/site_piaa/code_source/back_piaa/public;
+    index index.php index.html;
+    charset utf-8;
+
+    # Configuration pour back-office
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+
+    location /app {
+        alias /home/tsinjo/site_piaa/code_source/front_piaa/dist/;
+        index index.html;
+        try_files $uri $uri/ /app/index.html;
+    }
+
+    # Fichiers statiques
+    location = /favicon.ico {
+        access_log off;
+        log_not_found off;
+    }
+
+    location = /robots.txt {
+        access_log off;
+        log_not_found off;
+    }
+
+    # Gestion des erreurs 404
+    error_page 404 /index.php;
+
+    # Traitement PHP
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/run/php/php8.3-fpm.sock;
+        fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name;
+        include fastcgi_params;
+    }
+
+    # Protection des fichiers cachés
+    location ~ /\.(?!well-known).* {
+        deny all;
+    }
+}
